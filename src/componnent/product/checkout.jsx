@@ -28,7 +28,7 @@ const Checkout = ({ cartItems, updateQuantity, totalPrice }) => {
                 </div>
                 <div>
                   <p>
-                    Quantity: <span>{updateQuantity}</span>
+                    Quantity: <span>{updateQuantity} 1</span>
                   </p>
                 </div>
               </div>
