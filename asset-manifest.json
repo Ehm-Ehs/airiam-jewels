@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.1933b7fc.css",
-    "main.js": "/static/js/main.c32aed59.js",
-    "static/js/453.00dbbeea.chunk.js": "/static/js/453.00dbbeea.chunk.js",
-    "static/media/pd3.png": "/static/media/pd3.35162693aa108fe30506.png",
-    "static/media/heroImage.png": "/static/media/heroImage.ba93fee68fbf564d0580.png",
-    "static/media/pd2.png": "/static/media/pd2.e0bec6cdee07f28467af.png",
-    "static/media/pd1.png": "/static/media/pd1.1e2d1650ceea2ef4da55.png",
-    "static/media/pd4.png": "/static/media/pd4.3915427763a8f18dfa7d.png",
-    "static/media/pd5.png": "/static/media/pd5.a17ab8c44f5e13b06dab.png",
-    "static/media/pd9.png": "/static/media/pd9.d7be791366f2c0abbfc0.png",
-    "static/media/pd7.png": "/static/media/pd7.b7fcbdea21d0d45750b6.png",
-    "static/media/pd6.png": "/static/media/pd6.29224c30c69ce7424a8f.png",
-    "static/media/pd8.png": "/static/media/pd8.31c20e4ace17af1c2205.png",
-    "index.html": "/index.html",
-    "main.1933b7fc.css.map": "/static/css/main.1933b7fc.css.map",
-    "main.c32aed59.js.map": "/static/js/main.c32aed59.js.map",
-    "453.00dbbeea.chunk.js.map": "/static/js/453.00dbbeea.chunk.js.map"
+    "main.css": "/airiamJewels/static/css/main.1933b7fc.css",
+    "main.js": "/airiamJewels/static/js/main.d80ca11f.js",
+    "static/js/453.00dbbeea.chunk.js": "/airiamJewels/static/js/453.00dbbeea.chunk.js",
+    "static/media/pd3.png": "/airiamJewels/static/media/pd3.35162693aa108fe30506.png",
+    "static/media/heroImage.png": "/airiamJewels/static/media/heroImage.ba93fee68fbf564d0580.png",
+    "static/media/pd2.png": "/airiamJewels/static/media/pd2.e0bec6cdee07f28467af.png",
+    "static/media/pd1.png": "/airiamJewels/static/media/pd1.1e2d1650ceea2ef4da55.png",
+    "static/media/pd4.png": "/airiamJewels/static/media/pd4.3915427763a8f18dfa7d.png",
+    "static/media/pd5.png": "/airiamJewels/static/media/pd5.a17ab8c44f5e13b06dab.png",
+    "static/media/pd9.png": "/airiamJewels/static/media/pd9.d7be791366f2c0abbfc0.png",
+    "static/media/pd7.png": "/airiamJewels/static/media/pd7.b7fcbdea21d0d45750b6.png",
+    "static/media/pd6.png": "/airiamJewels/static/media/pd6.29224c30c69ce7424a8f.png",
+    "static/media/pd8.png": "/airiamJewels/static/media/pd8.31c20e4ace17af1c2205.png",
+    "index.html": "/airiamJewels/index.html",
+    "main.1933b7fc.css.map": "/airiamJewels/static/css/main.1933b7fc.css.map",
+    "main.d80ca11f.js.map": "/airiamJewels/static/js/main.d80ca11f.js.map",
+    "453.00dbbeea.chunk.js.map": "/airiamJewels/static/js/453.00dbbeea.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1933b7fc.css",
-    "static/js/main.c32aed59.js"
+    "static/js/main.d80ca11f.js"
   ]
 }
