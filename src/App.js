@@ -12,12 +12,12 @@ const App = () => {
   const [products, setProducts] = useState([]);
 
   const queryParams = {
-    organization_id: process.env.REACT_APP_ORG_ID,
+    organization_id:"53eccaaa761c4d93913a883b533b5022",
     reverse_sort: false,
     page: 1,
     size: 10,
-    Appid: process.env.REACT_APP_APP_ID,
-    Apikey: process.env.REACT_APP_API_KEY,
+    Appid: 'FR547RC9WE6AGXV',
+    Apikey: "4840f88a65d1492f960f2b780810c3c020240712231259254747",
   };
 
   const buildApiUrl = () => {
