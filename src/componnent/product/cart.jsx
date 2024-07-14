@@ -3,21 +3,21 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cartItems, removeFromCart, updateQuantity, totalPrice }) => {
   const navigate = useNavigate();
-
+  console.log(cartItems);
   return (
-    <div className="flex items-center pt-[42px] pb-16 justify-center ">
-      <div className="bg-white  sm:p-10">
-        <div className=" mb-4">
-          <h2 className="text-[32px] md:text-5xlfont-bold py-6 ">Cart</h2>
+    <div className="flex items-center pt-[42px] pb-16 justify-center">
+      <div className="bg-white sm:p-10">
+        <div className="mb-4">
+          <h2 className="text-[32px] md:text-5xl font-bold py-6">Cart</h2>
         </div>
         <div className="py-2">
           {cartItems.length === 0 ? (
             <p>Your cart is empty</p>
           ) : (
-            cartItems.map((item, index) => (
+            cartItems.map((item) => (
               <div
-                key={index}
-                className="flex  justify-between border-b border-[#BABABA] py-10"
+                key={item.id}
+                className="flex justify-between border-b border-[#BABABA] py-10"
               >
                 <div className="border-[#D4AF37] sm:h-[206px] border sm:py-[30px] sm:pr-[36px] sm:pl-[37px] rounded mr-9">
                   <img
@@ -33,8 +33,10 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity, totalPrice }) => {
                   </h3>
                   <div className="flex items-center space-x-[31px]">
                     <p className="text-lg sm:text-3xl font-semibold">
-                      ${item.price.toFixed(2)}
+              
+                      NGN {item.current_price[0].NGN[0].toFixed(2)}
                     </p>
+
                     <div className="flex items-center justify-between">
                       <button
                         onClick={() =>
@@ -63,7 +65,7 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity, totalPrice }) => {
                       onClick={() => removeFromCart(item.id)}
                       className="flex items-center"
                     >
-                      <span className="">
+                      <span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"
@@ -86,11 +88,14 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity, totalPrice }) => {
           )}
           {cartItems.length > 0 && (
             <div className="mt-4 flex justify-between items-center">
+              <p className="text-lg sm:text-3xl font-semibold">
+                Total:   NGN{totalPrice.toFixed(2)}
+              </p>
               <button
-                className="bg-[#C99A9A] text-white py-2 px-4 rounded-lg w-full"
+                className="bg-[#C99A9A] text-white py-2 px-4 rounded-lg"
                 onClick={() => navigate("/checkout")}
               >
-          Proceed to checkout
+                Proceed to checkout
               </button>
             </div>
           )}

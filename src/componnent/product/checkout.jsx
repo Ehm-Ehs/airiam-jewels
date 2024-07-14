@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Checkout = ({ cartItems, updateQuantity, totalPrice }) => {
+const Checkout = ({ cartItems, totalPrice }) => {
   return (
-    <div className="flex items-center pt-[42px] pb-16 justify-center ">
+    <div className="flex items-center pt-[42px] pb-16 justify-center">
       <div className="bg-white p-10">
         <div className="mb-4">
           <h2 className="text-[32px] md:text-5xl font-bold py-6">Checkout</h2>
         </div>
         <div className="py-2">
-          {cartItems.map((item, index) => (
+          {cartItems.map((item) => (
             <div
-              key={index}
+              key={item.id}
               className="flex items-center justify-between border-b border-[#BABABA] py-10"
             >
-              <div className="border-[#D4AF37] sm:h-[143px] border sm:py-[30px] sm:pr-[36px] sm:pl-[37px] rounded mr-9 ">
+              <div className="border-[#D4AF37] sm:h-[143px] border sm:py-[30px] sm:pr-[36px] sm:pl-[37px] rounded mr-9">
                 <img
                   src={item.image}
                   alt={item.name}
@@ -22,20 +22,20 @@ const Checkout = ({ cartItems, updateQuantity, totalPrice }) => {
                 />
               </div>
               <div>
-                <div className="flex justify-between  lg:text-3xl gap-[10%] lg:min-w-[501px] font-semibold">
-                  <h3 className="  pb-[15px]">{item.name}</h3>
-                  <p className="">${item.price.toFixed(2)}</p>
+                <div className="flex justify-between lg:text-3xl gap-[10%] lg:min-w-[501px] font-semibold">
+                  <h3 className="pb-[15px]">{item.name}</h3>
+                  <p> NGN {item.current_price[0].NGN[0].toFixed(2)}</p>
                 </div>
                 <div>
                   <p>
-                    Quantity: <span>{updateQuantity} 1</span>
+                    Quantity: <span>{item.quantity}</span>
                   </p>
                 </div>
               </div>
             </div>
           ))}
           <div className="mt-4">
-            <div className=" md:flex items-center md:border pl-2 md:rounded-md my-10 md:my-[59px]">
+            <div className="md:flex items-center md:border pl-2 md:rounded-md my-10 md:my-[59px]">
               <input
                 type="text"
                 placeholder="Coupon code"
@@ -45,23 +45,18 @@ const Checkout = ({ cartItems, updateQuantity, totalPrice }) => {
                 Apply
               </button>
             </div>
-            <div className="flex justify-between ">
+            <div className="flex justify-between">
               <p className="text-lg">Subtotal</p>
-              <p className="text-lg">${totalPrice.toFixed(2)}</p>
+              <p className="text-lg">NGN {totalPrice.toFixed(2)}</p>
             </div>
-            <div className="flex justify-between my-8">
-              <p className="text-lg">Discount</p>
-              <p className="text-lg">$0</p>
-            </div>
-            <div className="flex justify-between ">
+
+            <div className="flex justify-between">
               <p className="text-lg font-bold">Total</p>
-              <p className="text-lg font-bold">${totalPrice.toFixed(2)}</p>
+              <p className="text-lg font-bold">NGN {totalPrice}</p>
             </div>
-       
-              <button className="bg-[#C99A9A] text-white w-full py-4 rounded-lg text-lg mt-10">
-                Pay with card
-              </button>
-        
+            <button className="bg-[#C99A9A] text-white w-full py-4 rounded-lg text-lg mt-10">
+              Pay with card
+            </button>
           </div>
         </div>
       </div>
