@@ -1,39 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Product = ({ addToCart }) => {
-  const [products, setProducts] = useState([]);
+const Product = ({ addToCart,products }) => {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
-  const queryParams = {
-    organization_id: '53eccaaa761c4d93913a883b533b5022',
-    reverse_sort: false,
-    page: 1,
-    size: 10,
-    Appid: 'FR547RC9WE6AGXV',
-    Apikey: '4840f88a65d1492f960f2b780810c3c020240712231259254747',
-  };
-
-  const buildApiUrl = () => {
-    const query = new URLSearchParams(queryParams).toString();
-    return `/api/products?${query}`;
-  };
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(buildApiUrl());
-        const data = await response.json();
-        setProducts(data.items);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
+console.log(products)
   const handleAddToCart = (product) => {
     addToCart(product);
     setShowModal(true);
