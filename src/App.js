@@ -12,17 +12,17 @@ const App = () => {
   const [products, setProducts] = useState([]);
 
   const queryParams = {
-    organization_id:"53eccaaa761c4d93913a883b533b5022",
+    organization_id: process.env.REACT_APP_ORG_ID,
     reverse_sort: false,
     page: 1,
     size: 10,
-    Appid: 'FR547RC9WE6AGXV',
-    Apikey: "4840f88a65d1492f960f2b780810c3c020240712231259254747",
+    Appid: process.env.REACT_APP_APP_ID,
+    Apikey: process.env.REACT_APP_API_KEY,
   };
 
   const buildApiUrl = () => {
     const query = new URLSearchParams(queryParams).toString();
-    return `/api/products?${query}`;
+    return `https://timbu-get-all-products.reavdev.workers.dev/products?${query}`;
   };
 
   useEffect(() => {
@@ -33,6 +33,7 @@ const App = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
+    
         setProducts(data.items);
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -41,7 +42,7 @@ const App = () => {
 
     fetchProducts();
   }, []);
-
+console.log(products)
   const addToCart = (product) => {
     const existingItem = cartItems.find((item) => item.id === product.id);
     if (existingItem) {
